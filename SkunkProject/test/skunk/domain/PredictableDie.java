@@ -18,6 +18,9 @@ public class PredictableDie {
 	public void roll() {
 		this.lastRoll = this.theRolls[this.nextInt];
 		this.nextInt++;
+		if(this.nextInt == this.theRolls.length) {
+			this.nextInt = 0;
+		}
 	}
 
 	public int getLastRoll() {
